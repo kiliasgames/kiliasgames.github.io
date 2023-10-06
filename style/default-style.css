@@ -34,6 +34,12 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: darkred;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
 p.header_subtitle {
     margin-top: 4px;
     margin-bottom: 0px;
