@@ -97,3 +97,16 @@ footer {
     letter-spacing: 1px;
     font-size: 14px;
 }
+
+p.copyright {
+    margin: 10px;
+}
+
+p.disclaimer {
+    margin: 10px;
+    line-height: 12px;
+}
+
+h3.disclaimer {
+    margin: 10px;
+}
