@@ -34,6 +34,18 @@ p.header_subtitle {
     font-size: 12px;
 }
 
+p.site_warning {
+    margin-top: 2px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    text-align: center;
+}
+
+hr {
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
+
 a.nav_menu {
     color: #f9f9f9;
     text-decoration: none;

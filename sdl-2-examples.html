@@ -16,17 +16,77 @@
     <a class="nav_menu" href="index.html">GAMES</a> |
     <a class="nav_menu" href="sdl-2-examples.html">SDL 2 EXAMPLES</a>
   </nav>
+  <p class="site_warning">WARNING: THIS SITE MAY CONTAIN CONTENT NOT APPROPRIATE FOR ALL AGES, OR MAY NOT BE APPROPRIATE FOR VIEWING AT WORK.</p>
+  <hr />
   <section>
     <h2>SDL 2 Examples</h2>
     <p>
       The collection of small examples written in <b>C++</b> and using <b>SDL 2</b>.<br />
-      <b>No executable files are provided for now</b>, but it is possible to build these examples using <a
-        href=https://cmake.org/download/">CMake</a> from sources (see links below).<br />
-      These examples were tested on <b>Windows</b> and <b>Linux</b> desktop operating systems.
+      No executable files are provided for now, but it is possible to build these examples using
+      <b>CMake</b> from sources.<br />
+      These examples were tested on <b>Windows</b> (Windows 11 21H2), <b>macOS</b> (macOS High Sierra 10.13.6) and <b>Linux</b> (Ubuntu 22.04 LTS, Fedora Linux 36) desktop operating systems.
+    </p>
+
+    <p>
+      Links for downloading SDL 2 libs:
+      <a href="https://www.libsdl.org/release/?C=M;O=D">SDL 2</a>,
+      <a href="https://www.libsdl.org/projects/SDL_image/release/?C=M;O=D">SDL 2 Image</a>,
+      <a href="https://www.libsdl.org/projects/SDL_ttf/release/?C=M;O=D">SDL 2 TTF</a>.
     </p>
     <p>
-      Note for building on <b>Windows</b>: you may need to add <a href="source/sdl2-config.cmake">sdl2-config.cmake</a>
-      to your directory with <b>SDL 2</b> library to build the examples.<br />
+      <b>Notes for building on Windows</b>: 
+      <ul>
+        <li>You may need to add <a href="source/sdl2-config.cmake">sdl2-config.cmake</a> to your directory with SDL 2 library to build the examples.</li>
+        <li>CMake assumes existence of the following paths: <code>..\Libs\SDL2-2.0.22 ..\Libs\SDL2_image-2.0.5 ..\Libs\SDL2_ttf-2.0.18</code> (related to a project directory with <code>CMakeLists.txt</code>).</li>
+        <li>Run one of <code>*.bat</code> files from <code>Scripts</code> directory to generate a Visual Studio 2019 or 2022 project (in <code>Build</code> directory).</li>
+      </ul>
+    </p>
+    <p>
+      <b>Notes for building on macOS</b>: <br/>
+      <ul>
+        <li>
+          Installing CMake, GCC and SDL 2 dev libs using <code>brew</code> on macOS (but installing may be slow!): <br/><br/>
+          <code>
+            brew update<br/>
+            brew install cmake<br/>
+            brew install SDL2<br/>
+            brew install SDL2_image<br/>
+            brew install SDL2_ttf<br/>
+          </code><br/>
+          Clang is a default compiler for macOS and it should work for the examples fine. <br/>
+          However, one can install/use GCC as well: <code>brew install gcc</code> (but installing GCC using <code>brew</code> may be very slow!).
+        </li><br/>
+        <li>Run <code>*.sh</code> file from <code>Scripts</code> directory to generate a Unix make project (in <code>Build</code> directory).</li><br/>
+        <li>Alternatively, one may want to generate a Xcode project using CMake, but in this case some extra work/setup with CMake required.</li>
+      </ul>
+    </p>
+    <p>
+      <b>Notes for building on Linux</b>: <br/>
+      <ul>
+        <li>
+          Installing CMake, GCC and SDL 2 dev libs using <code>apt-get</code> on Debian and Debian-based distros (Ubuntu, Linux Mint, etc.): <br/><br/>
+          <code>
+            sudo apt-get update<br/>
+            sudo apt-get install cmake<br/>
+            sudo apt-get install build-essential <br/>
+            sudo apt-get install libsdl2-dev <br/>
+            sudo apt-get install libsdl2-image-dev <br/>
+            sudo apt-get install libsdl2-ttf-dev
+          </code>
+        </li><br/>
+        <li>
+          Installing CMake, GCC and SDL 2 dev libs using <code>dnf</code> on Fedora Linux, CentOS, Red Hat Enterprise Linux: <br/><br/>
+          <code>
+            sudo dnf install cmake<br/>
+            sudo dnf groupinstall "Development Tools" "Development Libraries"<br/>
+            sudo dnf install SDL2-devel<br/>
+            sudo dnf install SDL2_image-devel<br/>
+            sudo dnf install SDL2_ttf-devel<br/>
+          </code><br/>
+          You may try <code>sudo dnf groupinstall @development-tools @development-libraries</code> for older versions of Fedora Linux.
+        </li><br/>
+        <li>Run <code>*.sh</code> file from <code>Scripts</code> directory to generate a Unix make project (in <code>Build</code> directory).</li>
+      </ul>
     </p>
     <section>
       <h3>Image BMP</h3>
@@ -36,11 +96,38 @@
     <section>
       <h3>Image PNG</h3>
       <a target="_blank" href="sdl-2-examples/image_png.png"><img src="sdl-2-examples/image_png.png" width="600" /></a>
-      <p>Download Source</p>
+      <p><a href="source/Image_PNG.zip">Download Source (Image_PNG.zip)</a></p>
+    </section>
+    <section>
+      <h3>Text TTF</h3>
+      <a target="_blank" href="sdl-2-examples/text_ttf.png"><img src="sdl-2-examples/text_ttf.png" width="600" /></a>
+      <p><a href="source/Text_TTF.zip">Download Source (Text_TTF.zip)</a></p>
+    </section>
+    <section>
+      <h3>Texture PNG</h3>
+      <a target="_blank" href="sdl-2-examples/texture_png.png"><img src="sdl-2-examples/texture_png.png" width="600" /></a>
+      <p><a href="source/Texture_PNG.zip">Download Source (Texture_PNG.zip)</a></p>
+    </section>
+    <section>
+      <h3>Click</h3>
+      <a target="_blank" href="sdl-2-examples/click.png"><img src="sdl-2-examples/click.png" width="600" /></a>
+      <p><a href="source/Click.zip">Download Source (Click.zip)</a></p>
+    </section>
+    <section>
+      <h3>Character</h3>
+      <a target="_blank" href="sdl-2-examples/character.png"><img src="sdl-2-examples/character.png" width="600" /></a>
+      <p><a href="source/Character.zip">Download Source (Character.zip)</a></p>
     </section>
   </section>
   <footer>
-    <time>2022</time>, Developed by Kilias, Contact: kilias.tech@gmail.com
+    <small>
+      <p>Copyright (C) 2022 Kilias, Contact: kilias.tech@gmail.com</p>
+      <section>
+        <h3>WEBSITE DISCLAIMER</h3>
+        <p>The information provided by Kilias on https://kilias-tech.github.io is for general informational purposes only. All information on the Site is provided in good faith, however, the author make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the Site.</p>
+        <p>NO CIRCUMSTANCE SHALL THE AUTHOR HAVE ANY LIABILITY TO YOU FOR ANY LOSS OR DAMAGE OF ANY KIND INCURRED AS A RESULT OF THE USE OF THE SITE OR RELIANCE ON ANY INFORMATION PROVIDED ON THE SITE. YOUR USE OF THE SITE AND YOUR RELIANCE ON ANY INFORMATION ON THE SITE IS SOLELY AT YOUR OWN RISK.</p>
+      </section>
+    </small>
   </footer>
 </body>
 
