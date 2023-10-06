@@ -3,132 +3,136 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>SDL 2 Examples - Kilias Tech</title>
-  <link rel="stylesheet" href="style/default-style.css">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNGNPMTG0F"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta charset="utf-8">
+    <title>SDL 2 Examples - Kilias Tech</title>
+    <link rel="stylesheet" href="style/default-style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNGNPMTG0F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-ZNGNPMTG0F');
-  </script>
+        gtag('config', 'G-ZNGNPMTG0F');
+    </script>
 </head>
 
 <body>
-  <header>
-    <h1 class="header_title">KILIAS TECH</h1>
-    <p class="header_subtitle">GAMES AND OTHER SOFTWARE DEVELOPED BY KILIAS</p>
-  </header>
-  <nav>
-    <a class="nav_menu" href="index.html">GAMES</a> |
-    <a class="nav_menu" href="sdl-2-examples.html">SDL 2 EXAMPLES</a>
-  </nav>
-  <p class="site_warning">WARNING: THIS SITE MAY CONTAIN CONTENT NOT APPROPRIATE FOR ALL AGES, OR MAY NOT BE APPROPRIATE FOR VIEWING AT WORK.</p>
-  <hr />
-  <section>
-    <h2>SDL 2 Examples</h2>
-    <p>
-      The collection of small examples written in <b>C++</b> and using <b>SDL 2</b>.<br />
-      No executable files are provided for now, but it is possible to build these examples using
-      <b>CMake</b> from sources.<br />
-      These examples were tested on <b>Windows</b> (Windows 11 21H2), <b>macOS</b> (macOS High Sierra 10.13.6) and <b>Linux</b> (Ubuntu 22.04 LTS, Fedora Linux 36) desktop operating systems.
-    </p>
+    <header>
+        <h1 class="header_title">KILIAS TECH</h1>
+        <p class="header_subtitle">GAMES AND OTHER SOFTWARE DEVELOPED BY KILIAS</p>
+    </header>
+    <nav>
+        <a class="nav_menu" href="index.html">GAMES</a> |
+        <a class="nav_menu" href="sdl-2-examples.html">SDL 2 EXAMPLES</a>
+    </nav>
+    <p class="site_warning">WARNING: THIS SITE MAY CONTAIN CONTENT NOT APPROPRIATE FOR ALL AGES, OR MAY NOT BE APPROPRIATE FOR VIEWING AT WORK.</p>
+    <hr />
+    <section>
+        <h2>SDL 2 Examples</h2>
+        <p>
+            The collection of small examples written in <b>C++</b> and using <b>SDL 2</b>.<br />
+            No executable files are provided for now, but it is possible to build these examples using
+            <b>CMake</b> from sources.<br />
+            These examples were tested on <b>Windows</b> (Windows 11 21H2), <b>macOS</b> (macOS High Sierra 10.13.6) and <b>Linux</b> (Ubuntu 22.04 LTS, Fedora Linux 36) desktop operating systems.
+        </p>
 
-    <p>
-      Links for downloading SDL 2 libs:
-      <a href="https://www.libsdl.org/release/?C=M;O=D">SDL 2</a>,
-      <a href="https://www.libsdl.org/projects/SDL_image/release/?C=M;O=D">SDL 2 Image</a>,
-      <a href="https://www.libsdl.org/projects/SDL_ttf/release/?C=M;O=D">SDL 2 TTF</a>.
-    </p>
-    <p>
-      <b>Notes for building on Windows</b>: 
-      <ul>
-        <li>You may need to add <a href="source/sdl2-config.cmake">sdl2-config.cmake</a> to your directory with SDL 2 library to build the examples.</li>
-        <li>CMake assumes existence of the following paths: <code>..\Libs\SDL2-2.0.22 ..\Libs\SDL2_image-2.0.5 ..\Libs\SDL2_ttf-2.0.18</code> (related to a project directory with <code>CMakeLists.txt</code>).</li>
-        <li>Run one of <code>*.bat</code> files from <code>Scripts</code> directory to generate a Visual Studio 2019 or 2022 project (in <code>Build</code> directory).</li>
-      </ul>
-    </p>
-    <p>
-      <b>Notes for building on macOS</b>: <br/>
-      <ul>
-        <li>
-          Installing CMake, GCC and SDL 2 dev libs using <code>brew</code> on macOS (but installing may be slow!): <br/><br/>
-          <code>
-            brew update<br/>
-            brew install cmake<br/>
-            brew install SDL2<br/>
-            brew install SDL2_image<br/>
-            brew install SDL2_ttf<br/>
-          </code><br/>
-          Clang is a default compiler for macOS and it should work for the examples fine. <br/>
-          However, one can install/use GCC as well: <code>brew install gcc</code> (but installing GCC using <code>brew</code> may be very slow!).
-        </li><br/>
-        <li>Run <code>*.sh</code> file from <code>Scripts</code> directory to generate a Unix make project (in <code>Build</code> directory).</li><br/>
-        <li>Alternatively, one may want to generate a Xcode project using CMake, but in this case some extra work/setup with CMake required.</li>
-      </ul>
-    </p>
-    <p>
-      <b>Notes for building on Linux</b>: <br/>
-      <ul>
-        <li>
-          Installing CMake, GCC and SDL 2 dev libs using <code>apt-get</code> on Debian and Debian-based distros (Ubuntu, Linux Mint, etc.): <br/><br/>
-          <code>
-            sudo apt-get update<br/>
-            sudo apt-get install cmake<br/>
-            sudo apt-get install build-essential <br/>
-            sudo apt-get install libsdl2-dev <br/>
-            sudo apt-get install libsdl2-image-dev <br/>
-            sudo apt-get install libsdl2-ttf-dev
-          </code>
-        </li><br/>
-        <li>
-          Installing CMake, GCC and SDL 2 dev libs using <code>dnf</code> on Fedora Linux, CentOS, Red Hat Enterprise Linux: <br/><br/>
-          <code>
-            sudo dnf install cmake<br/>
-            sudo dnf groupinstall "Development Tools" "Development Libraries"<br/>
-            sudo dnf install SDL2-devel<br/>
-            sudo dnf install SDL2_image-devel<br/>
-            sudo dnf install SDL2_ttf-devel<br/>
-          </code><br/>
-          You may try <code>sudo dnf groupinstall @development-tools @development-libraries</code> for older versions of Fedora Linux.
-        </li><br/>
-        <li>Run <code>*.sh</code> file from <code>Scripts</code> directory to generate a Unix make project (in <code>Build</code> directory).</li>
-      </ul>
-    </p>
-    <section>
-      <h3>Image BMP</h3>
-      <a target="_blank" href="sdl-2-examples/image_bmp.png"><img src="sdl-2-examples/image_bmp.png" width="400" /></a>
-      <p><a href="source/Image_BMP.zip">Download Source (Image_BMP.zip)</a></p>
+        <p>
+            Links for downloading SDL 2 libs:
+            <a href="https://www.libsdl.org/release/?C=M;O=D">SDL 2</a>,
+            <a href="https://www.libsdl.org/projects/SDL_image/release/?C=M;O=D">SDL 2 Image</a>,
+            <a href="https://www.libsdl.org/projects/SDL_ttf/release/?C=M;O=D">SDL 2 TTF</a>.
+        </p>
+        <p>
+            <b>Notes for building on Windows</b>:
+            <ul>
+                <li>You may need to add <a href="source/sdl2-config.cmake">sdl2-config.cmake</a> to your directory with SDL 2 library to build the examples.</li>
+                <li>CMake assumes existence of the following paths: <code>..\Libs\SDL2-2.0.22 ..\Libs\SDL2_image-2.0.5 ..\Libs\SDL2_ttf-2.0.18</code> (related to a project directory with <code>CMakeLists.txt</code>).</li>
+                <li>Run one of <code>*.bat</code> files from <code>Scripts</code> directory to generate a Visual Studio 2019 or 2022 project (in <code>Build</code> directory).</li>
+            </ul>
+        </p>
+        <p>
+            <b>Notes for building on macOS</b>: <br />
+            <ul>
+                <li>
+                    Installing CMake, GCC and SDL 2 dev libs using <code>brew</code> on macOS (but installing may be slow!): <br /><br />
+                    <code>
+                        brew update<br />
+                        brew install cmake<br />
+                        brew install SDL2<br />
+                        brew install SDL2_image<br />
+                        brew install SDL2_ttf<br />
+                    </code><br />
+                    Clang is a default compiler for macOS and it should work for the examples fine. <br />
+                    However, one can install/use GCC as well: <code>brew install gcc</code> (but installing GCC using <code>brew</code> may be very slow!).
+                </li>
+                <br />
+                <li>Run <code>*.sh</code> file from <code>Scripts</code> directory to generate a Unix make project (in <code>Build</code> directory).</li>
+                <br />
+                <li>Alternatively, one may want to generate a Xcode project using CMake, but in this case some extra work/setup with CMake required.</li>
+            </ul>
+        </p>
+        <p>
+            <b>Notes for building on Linux</b>: <br />
+            <ul>
+                <li>
+                    Installing CMake, GCC and SDL 2 dev libs using <code>apt-get</code> on Debian and Debian-based distros (Ubuntu, Linux Mint, etc.): <br /><br />
+                    <code>
+                        sudo apt-get update<br />
+                        sudo apt-get install cmake<br />
+                        sudo apt-get install build-essential <br />
+                        sudo apt-get install libsdl2-dev <br />
+                        sudo apt-get install libsdl2-image-dev <br />
+                        sudo apt-get install libsdl2-ttf-dev
+                    </code>
+                </li>
+                <br />
+                <li>
+                    Installing CMake, GCC and SDL 2 dev libs using <code>dnf</code> on Fedora Linux, CentOS, Red Hat Enterprise Linux: <br /><br />
+                    <code>
+                        sudo dnf install cmake<br />
+                        sudo dnf groupinstall "Development Tools" "Development Libraries"<br />
+                        sudo dnf install SDL2-devel<br />
+                        sudo dnf install SDL2_image-devel<br />
+                        sudo dnf install SDL2_ttf-devel<br />
+                    </code><br />
+                    You may try <code>sudo dnf groupinstall @development-tools @development-libraries</code> for older versions of Fedora Linux.
+                </li>
+                <br />
+                <li>Run <code>*.sh</code> file from <code>Scripts</code> directory to generate a Unix make project (in <code>Build</code> directory).</li>
+            </ul>
+        </p>
+        <section>
+            <h3>Image BMP</h3>
+            <a target="_blank" href="sdl-2-examples/image_bmp.png"><img src="sdl-2-examples/image_bmp.png" width="400" /></a>
+            <p><a href="source/Image_BMP.zip">Download Source (Image_BMP.zip)</a></p>
+        </section>
+        <section>
+            <h3>Image PNG</h3>
+            <a target="_blank" href="sdl-2-examples/image_png.png"><img src="sdl-2-examples/image_png.png" width="400" /></a>
+            <p><a href="source/Image_PNG.zip">Download Source (Image_PNG.zip)</a></p>
+        </section>
+        <section>
+            <h3>Text TTF</h3>
+            <a target="_blank" href="sdl-2-examples/text_ttf.png"><img src="sdl-2-examples/text_ttf.png" width="400" /></a>
+            <p><a href="source/Text_TTF.zip">Download Source (Text_TTF.zip)</a></p>
+        </section>
+        <section>
+            <h3>Texture PNG</h3>
+            <a target="_blank" href="sdl-2-examples/texture_png.png"><img src="sdl-2-examples/texture_png.png" width="400" /></a>
+            <p><a href="source/Texture_PNG.zip">Download Source (Texture_PNG.zip)</a></p>
+        </section>
+        <section>
+            <h3>Click</h3>
+            <a target="_blank" href="sdl-2-examples/click.png"><img src="sdl-2-examples/click.png" width="400" /></a>
+            <p><a href="source/Click.zip">Download Source (Click.zip)</a></p>
+        </section>
+        <section>
+            <h3>Character</h3>
+            <a target="_blank" href="sdl-2-examples/character.png"><img src="sdl-2-examples/character.png" width="400" /></a>
+            <p><a href="source/Character.zip">Download Source (Character.zip)</a></p>
+        </section>
     </section>
-    <section>
-      <h3>Image PNG</h3>
-      <a target="_blank" href="sdl-2-examples/image_png.png"><img src="sdl-2-examples/image_png.png" width="400" /></a>
-      <p><a href="source/Image_PNG.zip">Download Source (Image_PNG.zip)</a></p>
-    </section>
-    <section>
-      <h3>Text TTF</h3>
-      <a target="_blank" href="sdl-2-examples/text_ttf.png"><img src="sdl-2-examples/text_ttf.png" width="400" /></a>
-      <p><a href="source/Text_TTF.zip">Download Source (Text_TTF.zip)</a></p>
-    </section>
-    <section>
-      <h3>Texture PNG</h3>
-      <a target="_blank" href="sdl-2-examples/texture_png.png"><img src="sdl-2-examples/texture_png.png" width="400" /></a>
-      <p><a href="source/Texture_PNG.zip">Download Source (Texture_PNG.zip)</a></p>
-    </section>
-    <section>
-      <h3>Click</h3>
-      <a target="_blank" href="sdl-2-examples/click.png"><img src="sdl-2-examples/click.png" width="400" /></a>
-      <p><a href="source/Click.zip">Download Source (Click.zip)</a></p>
-    </section>
-    <section>
-      <h3>Character</h3>
-      <a target="_blank" href="sdl-2-examples/character.png"><img src="sdl-2-examples/character.png" width="400" /></a>
-      <p><a href="source/Character.zip">Download Source (Character.zip)</a></p>
-    </section>
-  </section>
     <footer>
         <p class="copyright"><small>Copyright (C) 2022-2023 Kilias, Contact: kilias.tech@gmail.com</small></p>
         <section>
