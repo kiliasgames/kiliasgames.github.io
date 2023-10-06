@@ -28,6 +28,12 @@ h1.header_title {
     font-size: 24px;
 }
 
+a {
+    color: darkblue;
+    background-color: transparent;
+    text-decoration: none;
+}
+
 p.header_subtitle {
     margin-top: 4px;
     margin-bottom: 0px;
