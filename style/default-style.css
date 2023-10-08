@@ -40,6 +40,10 @@ a:hover {
     text-decoration: underline;
 }
 
+p {
+    word-break: break-word;
+}
+
 p.header_subtitle {
     margin-top: 4px;
     margin-bottom: 0px;
