@@ -1,4 +1,4 @@
-# Copyright (C) 2022 Kilias
+# Copyright (C) 2022-2023 Kilias Games
 
 cmake_minimum_required(VERSION 3.10)
 
