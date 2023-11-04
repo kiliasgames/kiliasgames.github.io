@@ -4,29 +4,29 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+    <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
-<url>
-  <loc>https://www.kiliasgames.com/</loc>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.kiliasgames.com/sdl-2-examples</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.kiliasgames.com/room-no-x</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.kiliasgames.com/wolord-blackout</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.kiliasgames.com/wolord</loc>
-  <priority>0.80</priority>
-</url>
+    <url>
+        <loc>https://www.kiliasgames.com/</loc>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://www.kiliasgames.com/sdl-2-examples</loc>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.kiliasgames.com/room-no-x</loc>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.kiliasgames.com/wolord-blackout</loc>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.kiliasgames.com/wolord</loc>
+        <priority>0.80</priority>
+    </url>
 
 
 </urlset>
